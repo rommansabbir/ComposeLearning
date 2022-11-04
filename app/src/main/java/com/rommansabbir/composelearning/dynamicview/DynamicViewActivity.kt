@@ -8,7 +8,6 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.GridCells
-import androidx.compose.foundation.lazy.LazyVerticalGrid
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Card
 import androidx.compose.material.MaterialTheme
@@ -28,6 +27,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.rememberAsyncImagePainter
+import com.rommansabbir.composelearning.CustomStaggeredVerticalGrid
 import com.rommansabbir.composelearning.ui.theme.ComposeLearningTheme
 
 class DynamicViewActivity : ComponentActivity() {
@@ -83,7 +83,7 @@ private fun EntryView() {
             .fillMaxHeight(),
         color = MaterialTheme.colors.background
     ) {
-        Column {
+        Column(modifier = Modifier.fillMaxHeight().fillMaxHeight().background(Color(0xFFf0e7e5))) {
             ShowDynamicViews()
         }
     }
@@ -93,12 +93,15 @@ private fun EntryView() {
 @Composable
 fun ShowDynamicViews() {
     val list = getDynamicViewMockedData()
-    LazyVerticalGrid(
-        cells = GridCells.Fixed(2),
-        modifier = Modifier.background(Color(0xFFf0e7e5))
+    CustomStaggeredVerticalGrid(
+        numColumns = 2,
+        modifier = Modifier
+            .wrapContentHeight()
     ) {
-        this.items(list.size) { index: Int ->
-            Column(modifier = Modifier.padding(16.dp)) {
+        list.forEachIndexed { index, baseDynamicModel ->
+            Column(modifier = Modifier
+                .padding(8.dp)
+                .wrapContentHeight()) {
                 when (index) {
                     0 -> DynamicView1(
                         model = getDynamicViewMockedData()[index] as DynamicViewActivity.Models.DynamicViewModel1
@@ -203,7 +206,7 @@ fun DynamicView3(model: DynamicViewActivity.Models.DynamicViewModel3) {
                 mutableStateOf(model.skillsSet)
             }
             Column {
-                Card(modifier = Modifier.padding(8.dp)) {
+                Card(modifier = Modifier.padding(8.dp), shape = RoundedCornerShape(8.dp)) {
                     Text(
                         text = list.toString(),
                         fontSize = 14.sp,
