@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">ComposeLearning</string>
+    <string name="title_activity_grid_view">GridViewActivity</string>
+</resources>
