@@ -1,4 +1,4 @@
-package com.rommansabbir.composelearning
+package com.rommansabbir.composelearning.dynamicview
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -14,41 +14,40 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.rommansabbir.composelearning.ui.theme.ComposeLearningTheme
 
-class MainActivity : ComponentActivity() {
+class DynamicViewActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             ComposeLearningTheme {
                 // A surface container using the 'background' color from the theme
-                EntryPoint()
+                EntryView()
             }
         }
     }
 }
 
 @Composable
-private fun EntryPoint(){
+private fun EntryView() {
     Surface(
         modifier = Modifier
             .fillMaxSize()
-            .fillMaxHeight()
-            .fillMaxWidth(),
+            .fillMaxWidth()
+            .fillMaxHeight(),
         color = MaterialTheme.colors.background
     ) {
-        EntryPoint()
+        Greeting3("Android")
     }
 }
 
-
 @Composable
-fun Greeting(name: String) {
+fun Greeting3(name: String) {
     Text(text = "Hello $name!")
 }
 
 @Preview(showBackground = true)
 @Composable
-fun DefaultPreview() {
+fun DefaultPreview3() {
     ComposeLearningTheme {
-        EntryPoint()
+        Greeting3("Android")
     }
 }

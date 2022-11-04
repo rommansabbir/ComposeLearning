@@ -22,7 +22,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.rommansabbir.composelearning.gridview.ui.theme.ComposeLearningTheme
+import com.rommansabbir.composelearning.ui.theme.ComposeLearningTheme
 
 class GridViewActivity : ComponentActivity() {
     companion object {
