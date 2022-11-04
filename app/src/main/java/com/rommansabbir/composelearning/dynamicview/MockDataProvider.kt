@@ -27,15 +27,7 @@ internal fun getDynamicViewMockedData(): MutableList<DynamicViewActivity.Models.
                 "CustomView",
                 "Code Review"
             ),
-            "Passionate Android Engineer with the experience of 4+ years in Android Native Application Development and it’s one of my biggest passion. Strong knowledge of Android Platform (Java/Kotlin), Collections, Multithreading, IO, Networking, Generics and Profiling.\n" +
-                    "\n" +
-                    "Building Scalable Enterprise Mobile Application by following SOLID, Design Pattern & Principles, Dependency Injection, Clean Architecture, MVVM, RxJava2, Coroutine, Git Flow, Git. \n" +
-                    "\n" +
-                    "Communication with Backend/Server Side through RESTAPI/GraphQL/Client SDK. Experience in Backend Development with Django and Spring Framework (Kotlin).\n" +
-                    "\n" +
-                    "Integration of 3rd Party Libraries, Documenting - Modularizing - Refactoring Code, Code Review and Maintaining proper codebase.\n" +
-                    "\n" +
-                    "I love to contribute to the Open-Source Community. I have developed several Android Libraries which are available on my Github Profile to Download or Intregration in Android Project."
+            "Passionate Android Engineer with the experience of 4+ years in Android Native Application Development and it’s one of my biggest passion. Strong knowledge of Android Platform (Java/Kotlin), Collections, Multithreading, IO, Networking, Generics and Profiling."
         ),
         DynamicViewActivity.Models.DynamicViewModel4(
             linkedInProfile = "https://www.linkedin.com/in/rommansabbir/",
